@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace UserAccessControl.Pages
+namespace UserAccessControl.Models
 {
     [Authorize(Roles = "EspecialUser")]
     public class EspecialUserPageModel : PageModel
