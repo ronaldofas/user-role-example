@@ -42,7 +42,7 @@ public class DbInitializer
             FullName = "Administrator"
         };
 
-        if (userManager.Users.All(u => u.Id != adminUser.Id))
+        if (await userManager.Users.AllAsync(u => u.Id != adminUser.Id))
         {
             var result = await userManager.CreateAsync(adminUser, "Password123!");
             if (result.Succeeded)
@@ -67,7 +67,7 @@ public class DbInitializer
             FullName = "User"
         };
 
-        if (userManager.Users.All(u => u.Id != usuarioComum.Id))
+        if (await userManager.Users.AllAsync(u => u.Id != usuarioComum.Id))
         {
             var result = await userManager.CreateAsync(usuarioComum, "Senha123!");
             if (result.Succeeded)
@@ -92,7 +92,7 @@ public class DbInitializer
             FullName = "Especial User"
         };
 
-        if (userManager.Users.All(u => u.Id != usuarioEspecial.Id))
+        if (await userManager.Users.AllAsync(u => u.Id != usuarioEspecial.Id))
         {
             var result = await userManager.CreateAsync(usuarioEspecial, "Senha123!");
             if (result.Succeeded)
