@@ -1,14 +1,14 @@
 @page
 @model UserAccessControl.Pages.Shared.Admin.EditUserModel
 @{
-    ViewData["Title"] = "Edit User";
+    ViewData["Title"] = "Editar Usuário";
 }
 
 <h2>@ViewData["Title"]</h2>
 
 <form method="post">
     <div class="form-group">
-        <label asp-for="User.UserName"></label>
+        <label asp-for="User.UserName">Nome de usuário</label>
         <input asp-for="User.UserName" class="form-control" />
         <span asp-validation-for="User.UserName" class="text-danger"></span>
     </div>
@@ -18,10 +18,10 @@
         <span asp-validation-for="User.Email" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="User.Role"></label>
+        <label asp-for="User.Role">Função (Role)</label>
         <select asp-for="User.Role" class="form-control" asp-items="Model.Roles"></select>
         <span asp-validation-for="User.Role" class="text-danger"></span>
     </div>
-    <button type="submit" class="btn btn-primary">Save</button>
-    <a asp-page="/Admin/ManageUsers" class="btn btn-secondary">Cancel</a>
+    <button type="submit" class="btn btn-primary">Salvar</button>
+    <a asp-page="/Admin/ManageUsers" class="btn btn-secondary">Cancelar</a>
 </form>
