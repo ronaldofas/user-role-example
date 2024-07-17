@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace UserAccessControl.Models
+namespace UserAccessControl.Pages.Shared
 {
     [Authorize(Roles = "Admin")]
     public class AdminPageModel : PageModel
