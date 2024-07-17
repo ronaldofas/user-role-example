@@ -130,7 +130,7 @@ namespace UserAccessControl.Areas.Identity.Pages.Account
                     }
                     else if (roles.Contains("User"))
                     {
-                        return RedirectToAction("/UserPage", "Home");
+                        return RedirectToAction("UserPage", "Home");
                     }
                     return LocalRedirect(returnUrl);
                 }
